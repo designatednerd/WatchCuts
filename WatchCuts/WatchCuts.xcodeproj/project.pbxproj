@@ -23,6 +23,8 @@
 		9B5EE9841C9DBDE800472FE4 /* Acceleration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5EE9821C9DBC9300472FE4 /* Acceleration.swift */; };
 		9BEA604D1C9DCC2B005C12B1 /* WatchKitMessageKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEA604C1C9DCC2B005C12B1 /* WatchKitMessageKey.swift */; };
 		9BEA604F1C9DCE82005C12B1 /* data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9BEA604E1C9DCE82005C12B1 /* data.txt */; };
+		9BEA60511C9DD13A005C12B1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BEA60501C9DD13A005C12B1 /* HealthKit.framework */; };
+		9BEA60551C9DD15F005C12B1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BEA60541C9DD15F005C12B1 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,10 @@
 		9B5EE9821C9DBC9300472FE4 /* Acceleration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Acceleration.swift; sourceTree = "<group>"; };
 		9BEA604C1C9DCC2B005C12B1 /* WatchKitMessageKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchKitMessageKey.swift; sourceTree = "<group>"; };
 		9BEA604E1C9DCE82005C12B1 /* data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.txt; sourceTree = "<group>"; };
+		9BEA60501C9DD13A005C12B1 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		9BEA60521C9DD13A005C12B1 /* WatchCuts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WatchCuts.entitlements; sourceTree = "<group>"; };
+		9BEA60531C9DD15F005C12B1 /* WatchCuts WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "WatchCuts WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		9BEA60541C9DD15F005C12B1 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.1.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BEA60511C9DD13A005C12B1 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BEA60551C9DD15F005C12B1 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +138,8 @@
 		9B299C181C9DA8930019AED1 /* WatchCuts */ = {
 			isa = PBXGroup;
 			children = (
+				9BEA60501C9DD13A005C12B1 /* HealthKit.framework */,
+				9BEA60521C9DD13A005C12B1 /* WatchCuts.entitlements */,
 				9B299C191C9DA8930019AED1 /* AppDelegate.swift */,
 				9B299C1B1C9DA8930019AED1 /* ViewController.swift */,
 				9BEA604E1C9DCE82005C12B1 /* data.txt */,
@@ -155,6 +165,8 @@
 		9B299C3B1C9DA8930019AED1 /* WatchCuts WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				9BEA60541C9DD15F005C12B1 /* HealthKit.framework */,
+				9BEA60531C9DD15F005C12B1 /* WatchCuts WatchKit Extension.entitlements */,
 				9B299C3E1C9DA8930019AED1 /* InterfaceController.swift */,
 				9B299C401C9DA8930019AED1 /* ExtensionDelegate.swift */,
 				9B5EE9821C9DBC9300472FE4 /* Acceleration.swift */,
@@ -233,6 +245,14 @@
 					9B299C151C9DA8930019AED1 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = 4U392EMNT3;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					9B299C271C9DA8930019AED1 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -241,6 +261,14 @@
 					9B299C361C9DA8930019AED1 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = 4U392EMNT3;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -444,11 +472,14 @@
 		9B299C4A1C9DA8930019AED1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "WatchCuts WatchKit Extension/WatchCuts WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "WatchCuts WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.baseballhack2016.WatchCuts.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -459,11 +490,14 @@
 		9B299C4B1C9DA8930019AED1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "WatchCuts WatchKit Extension/WatchCuts WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "WatchCuts WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.baseballhack2016.WatchCuts.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -509,11 +543,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WatchCuts/WatchCuts.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WatchCuts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.baseballhack2016.WatchCuts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -521,11 +558,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WatchCuts/WatchCuts.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WatchCuts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.baseballhack2016.WatchCuts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
