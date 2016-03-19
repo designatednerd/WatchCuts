@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
+    
 
     @IBOutlet weak var batLengthQuestionLabel: UILabel!
     @IBOutlet weak var batLengthField: UITextField!
@@ -19,8 +20,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     let batLengthUserKey = "batLength"
     
+    var accellerations: [Acceleration]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadDataFromFile()
         
         batLengthField.delegate = self
         let defaults = NSUserDefaults.standardUserDefaults()
@@ -38,6 +42,24 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func textFieldDidEndEditing(batLengthField: UITextField) {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setObject(batLengthField.text, forKey: batLengthUserKey)
+    }
+    
+    //MARK: Data loading
+    
+    func loadDataFromFile() {
+        guard
+            let file = NSBundle.mainBundle().pathForResource("data", ofType: "txt") else {
+            assertionFailure("Couldn't find file!")
+            return
+        }
+        
+        guard let fromFile = try? String(contentsOfFile: file) else {
+            assertionFailure("Couldn't load file")
+            return
+        }
+
+        //Split string here
+        
     }
     
 }
