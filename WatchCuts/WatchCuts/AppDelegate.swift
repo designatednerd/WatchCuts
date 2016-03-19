@@ -19,7 +19,10 @@ extension AppDelegate: WCSessionDelegate {
 
     func session(session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
         
-        if let accels = message[WatchKitMessageKey.accels.rawValue] as? [Acceleration] {
+        if
+        let accelData = message[WatchKitMessageKey.accels.rawValue] as? NSData,
+        let accels = NSKeyedUnarchiver.unarchiveObjectWithData(accelData) as? [Acceleration]
+        {
             NSLog("Accelerations: \(accels)")
             replyHandler([WatchKitMessageKey.success.rawValue: NSNumber(bool: true)])
         } else {

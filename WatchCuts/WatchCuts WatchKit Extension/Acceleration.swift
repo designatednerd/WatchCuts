@@ -15,6 +15,17 @@ class Acceleration: NSObject {
     let y: Double
     let z: Double
     
+    required convenience init?(coder aDecoder: NSCoder) {
+        guard
+            let x = aDecoder.decodeObjectForKey("x") as? Double,
+            let y = aDecoder.decodeObjectForKey("y") as? Double,
+            let z = aDecoder.decodeObjectForKey("z") as? Double else {
+                return nil
+        }
+        
+        self.init(x: x, y: y, z: z)
+    }
+    
     init(x: Double, y: Double, z: Double) {
         self.x = x
         self.y = y
@@ -48,5 +59,14 @@ class Acceleration: NSObject {
     
     override var description: String {
         return "\nx: \(self.x), y: \(self.y), z: \(self.z)"
+    }
+}
+
+extension Acceleration: NSCoding {
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(self.x, forKey: "x")
+        aCoder.encodeObject(self.y, forKey: "y")
+        aCoder.encodeObject(self.z, forKey: "z")
     }
 }
