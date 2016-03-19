@@ -14,7 +14,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var batLengthQuestionLabel: UILabel!
     @IBOutlet weak var batLengthField: UITextField!
     @IBOutlet weak var submitBatLengthButton: UIButton!
+    @IBOutlet weak var showVelocities: UIButton!
+    @IBOutlet weak var velocityDisplayLabel: UILabel!
+    @IBOutlet weak var maxXVelocity: UILabel!
     
+    @IBAction func showVelocities(sender: AnyObject) {
+        velocityDisplayLabel.text = "\(averageVelocity)"
+        maxXVelocity.text = "\(maximumVelocityX)"
+    }
     @IBAction func submitBatLength(sender: UIButton) {
         batLengthField.resignFirstResponder()
     }
@@ -22,7 +29,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     var accellerations: [Acceleration]?
     var velocities: [Double]?
-    var sampelRate = 1/60.0
+    var sampleRate = 1/60.0
+    var velocityXOverTime: [Double]?
+    var averageVelocity: Double!
+    var maximumVelocityX: Double!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +40,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let velocityX = calculateVelocityX(accellerations!)
         let velocityY = calculateVelocityY(accellerations!)
         let velocityZ = calculateVelocityZ(accellerations!)
-        let totalVelocity = calculateTotalVelocity(velocityX, velocityY, velocityZ)
         
-        NSLog("\(totalVelocity)")
+        averageVelocity = calculateAverageVelocity(velocityX, velocityY, velocityZ)
+        velocityXOverTime = calculateVelocityXOverTime(accellerations!)
+        maximumVelocityX = calculateMaxVelocityX(velocityXOverTime!)
+        
         
         batLengthField.delegate = self
         let defaults = NSUserDefaults.standardUserDefaults()
@@ -58,14 +70,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         
         let exesWithSampleRate = exes.map{
-            return $0 * sampelRate
+            return $0 * sampleRate
         }
         
         let velocity =  exesWithSampleRate.reduce(0) {
             seed, item in
             return seed + item
         }
-        return abs(velocity)
+        return velocity
     }
     
     func calculateVelocityY(accelerations: [Acceleration]) -> Double {
@@ -73,33 +85,58 @@ class ViewController: UIViewController, UITextFieldDelegate {
             return $0.y
         }
         let exesWithSampleRate = exes.map{
-            return $0 * sampelRate
+            return $0 * sampleRate
         }
         
         let velocity =  exesWithSampleRate.reduce(0) {
             seed, item in
             return seed + item
         }
-        return abs(velocity)
+        return velocity
     }
     
     func calculateVelocityZ(accelerations: [Acceleration]) -> Double {
         let exes = accelerations.map{
-            return $0.z
+            return ($0.z)
         }
         let exesWithSampleRate = exes.map{
-            return $0 * sampelRate
+            return $0 * sampleRate
         }
         
         let velocity =  exesWithSampleRate.reduce(0) {
             seed, item in
             return seed + item
         }
-        return abs(velocity)
+        return velocity
     }
     
-    func calculateTotalVelocity(velocityX: Double, _ velocityY: Double, _ velocityZ: Double) -> Double {
-        return sqrt(velocityX + velocityY + velocityZ)
+    func calculateAverageVelocity(velocityX: Double, _ velocityY: Double, _ velocityZ: Double) -> Double {
+        return sqrt(abs(velocityX) + abs(velocityY) + abs(velocityZ))
+    }
+    
+    func calculateVelocityXOverTime(accelerations: [Acceleration]) -> [Double]{
+        var velocities = [Double]()
+        for index in 1..<accelerations.count {
+            let velocityX = calculateVelocityX([accelerations[index-1], accelerations[index]])
+            velocities.append(velocityX - 0.0033)
+        }
+        
+        for index in 1..<velocities.count {
+            velocities[index] += velocities[index - 1]
+        }
+        return velocities.map{
+            return $0 * -1
+        }
+    }
+    
+    func calculateMaxVelocityX(velocities: [Double]) -> Double {
+        var max = velocities[0]
+        for index in 1..<velocities.count {
+            if velocities[index] > max {
+                max = velocities[index]
+            }
+        }
+        return max
     }
     
     //MARK: Data loading

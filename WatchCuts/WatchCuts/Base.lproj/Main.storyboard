@@ -38,12 +38,62 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6F-kn-UPy">
+                                <rect key="frame" x="230" y="398" width="141" height="30"/>
+                                <state key="normal" title="Calculate Velocities"/>
+                                <connections>
+                                    <action selector="showVelocities:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VwL-OB-JB5"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RPk-CH-LN5">
+                                <rect key="frame" x="192" y="443" width="153" height="46"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Q9J-dN-1XQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="132" height="46"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average Velocity:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zt1-ra-Vh8">
+                                                <rect key="frame" x="0.0" y="0.0" width="132" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max X Velocity:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnA-jH-fLG">
+                                                <rect key="frame" x="15" y="26" width="118" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8ji-tk-T3A">
+                                        <rect key="frame" x="142" y="0.0" width="11" height="46"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfs-zy-F5P">
+                                                <rect key="frame" x="0.0" y="0.0" width="9" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="b" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZX-FD-qQJ">
+                                                <rect key="frame" x="0.0" y="26" width="11" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="RPk-CH-LN5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DrI-Mj-viK"/>
                             <constraint firstItem="J5g-cN-pF2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="187" id="Ekc-44-ftM"/>
                             <constraint firstItem="xa0-ph-3ul" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ly5-vT-m3q"/>
                             <constraint firstItem="xa0-ph-3ul" firstAttribute="top" secondItem="4CD-sX-e3G" secondAttribute="bottom" constant="13" id="NIX-ce-I44"/>
+                            <constraint firstItem="x6F-kn-UPy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NZM-FU-O4U"/>
+                            <constraint firstItem="RPk-CH-LN5" firstAttribute="top" secondItem="x6F-kn-UPy" secondAttribute="bottom" constant="15" id="T2s-4q-6U4"/>
+                            <constraint firstItem="x6F-kn-UPy" firstAttribute="top" secondItem="xa0-ph-3ul" secondAttribute="bottom" constant="78" id="X8Y-sQ-kpE"/>
                             <constraint firstItem="J5g-cN-pF2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ym7-ra-8Uu"/>
                             <constraint firstItem="4CD-sX-e3G" firstAttribute="top" secondItem="J5g-cN-pF2" secondAttribute="bottom" constant="21" id="fph-mC-TRL"/>
                             <constraint firstItem="4CD-sX-e3G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mnD-Xy-Kxb"/>
@@ -52,7 +102,10 @@
                     <connections>
                         <outlet property="batLengthField" destination="4CD-sX-e3G" id="m5N-f9-aiy"/>
                         <outlet property="batLengthQuestionLabel" destination="J5g-cN-pF2" id="jD4-VX-grl"/>
+                        <outlet property="maxXVelocity" destination="VZX-FD-qQJ" id="zo0-Rj-ULU"/>
+                        <outlet property="showVelocities" destination="x6F-kn-UPy" id="rgN-Dy-E09"/>
                         <outlet property="submitBatLengthButton" destination="xa0-ph-3ul" id="541-9u-RMJ"/>
+                        <outlet property="velocityDisplayLabel" destination="jfs-zy-F5P" id="z3g-ih-Ajj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
