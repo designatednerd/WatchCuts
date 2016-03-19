@@ -47,6 +47,6 @@ class Acceleration: NSObject {
     }
     
     override var description: String {
-        return "x: \(self.x), y: \(self.y), z: \(self.z)"
+        return "\nx: \(self.x), y: \(self.y), z: \(self.z)"
     }
 }

@@ -21,6 +21,8 @@
 		9B299C451C9DA8930019AED1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B299C441C9DA8930019AED1 /* Assets.xcassets */; };
 		9B5EE9831C9DBC9300472FE4 /* Acceleration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5EE9821C9DBC9300472FE4 /* Acceleration.swift */; };
 		9B5EE9841C9DBDE800472FE4 /* Acceleration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5EE9821C9DBC9300472FE4 /* Acceleration.swift */; };
+		9BEA604D1C9DCC2B005C12B1 /* WatchKitMessageKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEA604C1C9DCC2B005C12B1 /* WatchKitMessageKey.swift */; };
+		9BEA604F1C9DCE82005C12B1 /* data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9BEA604E1C9DCE82005C12B1 /* data.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		9B299C441C9DA8930019AED1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B299C461C9DA8930019AED1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B5EE9821C9DBC9300472FE4 /* Acceleration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Acceleration.swift; sourceTree = "<group>"; };
+		9BEA604C1C9DCC2B005C12B1 /* WatchKitMessageKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchKitMessageKey.swift; sourceTree = "<group>"; };
+		9BEA604E1C9DCE82005C12B1 /* data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,10 +132,12 @@
 			children = (
 				9B299C191C9DA8930019AED1 /* AppDelegate.swift */,
 				9B299C1B1C9DA8930019AED1 /* ViewController.swift */,
+				9BEA604E1C9DCE82005C12B1 /* data.txt */,
 				9B299C1D1C9DA8930019AED1 /* Main.storyboard */,
 				9B299C201C9DA8930019AED1 /* Assets.xcassets */,
 				9B299C221C9DA8930019AED1 /* LaunchScreen.storyboard */,
 				9B299C251C9DA8930019AED1 /* Info.plist */,
+				9BEA604C1C9DCC2B005C12B1 /* WatchKitMessageKey.swift */,
 			);
 			path = WatchCuts;
 			sourceTree = "<group>";
@@ -263,6 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BEA604F1C9DCE82005C12B1 /* data.txt in Resources */,
 				9B299C241C9DA8930019AED1 /* LaunchScreen.storyboard in Resources */,
 				9B299C211C9DA8930019AED1 /* Assets.xcassets in Resources */,
 				9B299C1F1C9DA8930019AED1 /* Main.storyboard in Resources */,
@@ -293,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BEA604D1C9DCC2B005C12B1 /* WatchKitMessageKey.swift in Sources */,
 				9B299C1C1C9DA8930019AED1 /* ViewController.swift in Sources */,
 				9B5EE9841C9DBDE800472FE4 /* Acceleration.swift in Sources */,
 				9B299C1A1C9DA8930019AED1 /* AppDelegate.swift in Sources */,
