@@ -23,6 +23,7 @@
 		9B5EE9841C9DBDE800472FE4 /* Acceleration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5EE9821C9DBC9300472FE4 /* Acceleration.swift */; };
 		9BEA604D1C9DCC2B005C12B1 /* WatchKitMessageKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEA604C1C9DCC2B005C12B1 /* WatchKitMessageKey.swift */; };
 		9BEA604F1C9DCE82005C12B1 /* data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9BEA604E1C9DCE82005C12B1 /* data.txt */; };
+		9EB1A5121C9E135100E9552B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B299C1B1C9DA8930019AED1 /* ViewController.swift */; };
 		A76E32C69F3CC99F73B919ED /* libPods-WatchCuts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E4AE6D0646F882AF5C3CA2 /* libPods-WatchCuts.a */; };
 /* End PBXBuildFile section */
 
@@ -395,7 +396,7 @@
 			files = (
 				9BEA604D1C9DCC2B005C12B1 /* WatchKitMessageKey.swift in Sources */,
 				9B5EE9841C9DBDE800472FE4 /* Acceleration.swift in Sources */,
-				FC728BE71C9DED93000707CC /* ViewController.swift in Sources */,
+				9EB1A5121C9E135100E9552B /* ViewController.swift in Sources */,
 				9B299C1A1C9DA8930019AED1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

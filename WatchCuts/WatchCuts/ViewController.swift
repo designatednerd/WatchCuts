@@ -11,8 +11,8 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate, CPTPlotDataSource {
     
 
-    @IBOutlet weak var batLengthQuestionLabel: UILabel!
     @IBOutlet weak var batLengthField: UITextField!
+    @IBOutlet weak var batLengthQuestionLabel: UILabel!
     @IBOutlet weak var submitBatLengthButton: UIButton!
     @IBOutlet weak var showVelocities: UIButton!
     @IBOutlet weak var velocityDisplayLabel: UILabel!
