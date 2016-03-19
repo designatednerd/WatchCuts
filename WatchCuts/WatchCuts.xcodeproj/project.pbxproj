@@ -18,7 +18,6 @@
 		9B299C381C9DA8930019AED1 /* WatchCuts WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9B299C371C9DA8930019AED1 /* WatchCuts WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9B299C3F1C9DA8930019AED1 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B299C3E1C9DA8930019AED1 /* InterfaceController.swift */; };
 		9B299C411C9DA8930019AED1 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B299C401C9DA8930019AED1 /* ExtensionDelegate.swift */; };
-		9B299C431C9DA8930019AED1 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B299C421C9DA8930019AED1 /* NotificationController.swift */; };
 		9B299C451C9DA8930019AED1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B299C441C9DA8930019AED1 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -77,10 +76,8 @@
 		9B299C301C9DA8930019AED1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B299C321C9DA8930019AED1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B299C371C9DA8930019AED1 /* WatchCuts WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WatchCuts WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B299C3D1C9DA8930019AED1 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		9B299C3E1C9DA8930019AED1 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		9B299C401C9DA8930019AED1 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		9B299C421C9DA8930019AED1 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		9B299C441C9DA8930019AED1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B299C461C9DA8930019AED1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,20 +148,10 @@
 			children = (
 				9B299C3E1C9DA8930019AED1 /* InterfaceController.swift */,
 				9B299C401C9DA8930019AED1 /* ExtensionDelegate.swift */,
-				9B299C421C9DA8930019AED1 /* NotificationController.swift */,
 				9B299C441C9DA8930019AED1 /* Assets.xcassets */,
 				9B299C461C9DA8930019AED1 /* Info.plist */,
-				9B299C3C1C9DA8930019AED1 /* Supporting Files */,
 			);
 			path = "WatchCuts WatchKit Extension";
-			sourceTree = "<group>";
-		};
-		9B299C3C1C9DA8930019AED1 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				9B299C3D1C9DA8930019AED1 /* PushNotificationPayload.apns */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,7 +298,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B299C431C9DA8930019AED1 /* NotificationController.swift in Sources */,
 				9B299C411C9DA8930019AED1 /* ExtensionDelegate.swift in Sources */,
 				9B299C3F1C9DA8930019AED1 /* InterfaceController.swift in Sources */,
 			);

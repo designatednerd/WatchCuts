@@ -8,32 +8,17 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchCuts_WatchKit_App" customModuleProvider="target"/>
-            </objects>
-            <point key="canvasLocation" x="220" y="345"/>
-        </scene>
-        <!--Static Notification Interface Controller-->
-        <scene sceneID="AEw-b0-oYE">
-            <objects>
-                <notificationController id="YCC-NB-fut">
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchCuts_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                        <group width="1" alignment="center" verticalAlignment="center" id="uPc-bf-QZ5">
+                            <items>
+                                <label alignment="center" text="Label" id="vGv-D1-5LI"/>
+                            </items>
+                        </group>
                     </items>
-                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
-                    <connections>
-                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
-                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
-                    </connections>
-                </notificationController>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="643"/>
-        </scene>
-        <!--Notification Controller-->
-        <scene sceneID="ZPc-GJ-vnh">
-            <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="WatchCuts_WatchKit_App" customModuleProvider="target"/>
-            </objects>
-            <point key="canvasLocation" x="468" y="643"/>
+            <point key="canvasLocation" x="331" y="345"/>
         </scene>
     </scenes>
 </document>
