@@ -22,7 +22,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     var accellerations: [Acceleration]?
     var velocities: [Double]?
-    var sampelRate = 1/60.0
+    var sampleRate = 1/60.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +30,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let velocityX = calculateVelocityX(accellerations!)
         let velocityY = calculateVelocityY(accellerations!)
         let velocityZ = calculateVelocityZ(accellerations!)
-        let totalVelocity = calculateTotalVelocity(velocityX, velocityY, velocityZ)
+        let avergeVelocity = calculateAverageVelocity(velocityX, velocityY, velocityZ)
         
-        NSLog("\(totalVelocity)")
+        let velocityXOverTime = calculateVelocityXOverTime(accellerations!)
+        
         
         batLengthField.delegate = self
         let defaults = NSUserDefaults.standardUserDefaults()
@@ -58,14 +59,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         
         let exesWithSampleRate = exes.map{
-            return $0 * sampelRate
+            return $0 * sampleRate
         }
         
         let velocity =  exesWithSampleRate.reduce(0) {
             seed, item in
             return seed + item
         }
-        return abs(velocity)
+        return velocity
     }
     
     func calculateVelocityY(accelerations: [Acceleration]) -> Double {
@@ -73,33 +74,48 @@ class ViewController: UIViewController, UITextFieldDelegate {
             return $0.y
         }
         let exesWithSampleRate = exes.map{
-            return $0 * sampelRate
+            return $0 * sampleRate
         }
         
         let velocity =  exesWithSampleRate.reduce(0) {
             seed, item in
             return seed + item
         }
-        return abs(velocity)
+        return velocity
     }
     
     func calculateVelocityZ(accelerations: [Acceleration]) -> Double {
         let exes = accelerations.map{
-            return $0.z
+            return ($0.z)
         }
         let exesWithSampleRate = exes.map{
-            return $0 * sampelRate
+            return $0 * sampleRate
         }
         
         let velocity =  exesWithSampleRate.reduce(0) {
             seed, item in
             return seed + item
         }
-        return abs(velocity)
+        return velocity
     }
     
-    func calculateTotalVelocity(velocityX: Double, _ velocityY: Double, _ velocityZ: Double) -> Double {
-        return sqrt(velocityX + velocityY + velocityZ)
+    func calculateAverageVelocity(velocityX: Double, _ velocityY: Double, _ velocityZ: Double) -> Double {
+        return sqrt(abs(velocityX) + abs(velocityY) + abs(velocityZ))
+    }
+    
+    func calculateVelocityXOverTime(accelerations: [Acceleration]) -> [Double]{
+        var velocities = [Double]()
+        for index in 1..<accelerations.count {
+            let velocityX = calculateVelocityX([accelerations[index-1], accelerations[index]])
+            velocities.append(velocityX)
+        }
+        
+        for index in 1..<velocities.count {
+            velocities[index] += velocities[index - 1]
+        }
+        return velocities.map{
+            return $0 * -1
+        }
     }
     
     //MARK: Data loading
