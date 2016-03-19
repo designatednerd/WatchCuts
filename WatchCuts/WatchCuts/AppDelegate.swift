@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WatchConnectivity
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,3 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 }
 
+extension AppDelegate: WCSessionDelegate {
+
+    func session(session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
+        
+        if let accels = message["accels"] as? [Acceleration] {
+            NSLog("Accelerations: \(accels)")
+        } else {
+            NSLog("YOU CANNOT HAS")
+        }
+    }
+}
