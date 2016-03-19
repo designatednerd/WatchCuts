@@ -235,12 +235,15 @@
 				TargetAttributes = {
 					9B299C151C9DA8930019AED1 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 4U392EMNT3;
 					};
 					9B299C271C9DA8930019AED1 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 4U392EMNT3;
 					};
 					9B299C361C9DA8930019AED1 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 4U392EMNT3;
 					};
 				};
 			};
@@ -441,6 +444,7 @@
 		9B299C4A1C9DA8930019AED1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "WatchCuts WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.baseballhack2016.WatchCuts.watchkitapp.watchkitextension;
@@ -455,6 +459,7 @@
 		9B299C4B1C9DA8930019AED1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "WatchCuts WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.baseballhack2016.WatchCuts.watchkitapp.watchkitextension;
@@ -470,6 +475,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = WatchCuts_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchCuts WatchKit App/Info.plist";
@@ -486,6 +492,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = WatchCuts_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchCuts WatchKit App/Info.plist";
@@ -502,6 +509,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WatchCuts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.baseballhack2016.WatchCuts;
@@ -513,6 +521,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WatchCuts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.baseballhack2016.WatchCuts;
