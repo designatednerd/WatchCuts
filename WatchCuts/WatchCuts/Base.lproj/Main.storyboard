@@ -16,11 +16,48 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your bat length?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5g-cN-pF2">
+                                <rect key="frame" x="207" y="207" width="186" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xa0-ph-3ul">
+                                <rect key="frame" x="244" y="292" width="112" height="30"/>
+                                <state key="normal" title="Save Bat Length"/>
+                                <connections>
+                                    <action selector="submitBatLength:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PVJ-S3-4Db"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4CD-sX-e3G">
+                                <rect key="frame" x="192" y="249" width="217" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="217" id="UNy-jG-svi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="J5g-cN-pF2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="187" id="Ekc-44-ftM"/>
+                            <constraint firstItem="xa0-ph-3ul" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ly5-vT-m3q"/>
+                            <constraint firstItem="xa0-ph-3ul" firstAttribute="top" secondItem="4CD-sX-e3G" secondAttribute="bottom" constant="13" id="NIX-ce-I44"/>
+                            <constraint firstItem="J5g-cN-pF2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ym7-ra-8Uu"/>
+                            <constraint firstItem="4CD-sX-e3G" firstAttribute="top" secondItem="J5g-cN-pF2" secondAttribute="bottom" constant="21" id="fph-mC-TRL"/>
+                            <constraint firstItem="4CD-sX-e3G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mnD-Xy-Kxb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="batLengthField" destination="4CD-sX-e3G" id="m5N-f9-aiy"/>
+                        <outlet property="batLengthQuestionLabel" destination="J5g-cN-pF2" id="jD4-VX-grl"/>
+                        <outlet property="submitBatLengthButton" destination="xa0-ph-3ul" id="541-9u-RMJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="397" y="383"/>
         </scene>
     </scenes>
 </document>
