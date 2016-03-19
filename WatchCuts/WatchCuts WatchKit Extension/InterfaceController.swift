@@ -63,8 +63,8 @@ class InterfaceController: WKInterfaceController {
         NSLog("Accelerations: \(accelerations)")
         
         if WCSession.isSupported() {
-            let session = WCSession.defaultSession()
-            session.sendMessage(["accels": self.accelerations], replyHandler: {
+            self.session = WCSession.defaultSession()
+            self.session?.sendMessage(["accels": self.accelerations], replyHandler: {
                     [weak self]
                     dictionary in
                 

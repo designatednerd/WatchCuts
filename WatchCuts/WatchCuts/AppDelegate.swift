@@ -21,8 +21,10 @@ extension AppDelegate: WCSessionDelegate {
         
         if let accels = message["accels"] as? [Acceleration] {
             NSLog("Accelerations: \(accels)")
+            replyHandler(["success": true])
         } else {
             NSLog("YOU CANNOT HAS")
+            replyHandler(["success": false])
         }
     }
 }
