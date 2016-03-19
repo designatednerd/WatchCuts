@@ -14,7 +14,6 @@ import WatchConnectivity
 
 class InterfaceController: WKInterfaceController {
     
-    @IBOutlet var speedLabel: WKInterfaceLabel!
     @IBOutlet var xLabel: WKInterfaceLabel!
     @IBOutlet var yLabel: WKInterfaceLabel!
     @IBOutlet var zLabel: WKInterfaceLabel!
@@ -26,7 +25,6 @@ class InterfaceController: WKInterfaceController {
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         // Configure interface objects here.
-        self.speedLabel.setText("O HAI")
     }
 
     override func willActivate() {
