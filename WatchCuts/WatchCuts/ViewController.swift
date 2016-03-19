@@ -66,7 +66,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func calculateVelocityX(accelerations: [Acceleration]) -> Double {
         let exes = accelerations.map{
-            return $0.x
+            return ($0.x + 0.1)
         }
         
         let exesWithSampleRate = exes.map{
@@ -82,7 +82,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func calculateVelocityY(accelerations: [Acceleration]) -> Double {
         let exes = accelerations.map{
-            return $0.y
+            return ($0.y - 0.14)
         }
         let exesWithSampleRate = exes.map{
             return $0 * sampleRate
@@ -97,7 +97,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func calculateVelocityZ(accelerations: [Acceleration]) -> Double {
         let exes = accelerations.map{
-            return ($0.z)
+            return ($0.z + 0.98)
         }
         let exesWithSampleRate = exes.map{
             return $0 * sampleRate
