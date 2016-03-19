@@ -14,7 +14,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var batLengthQuestionLabel: UILabel!
     @IBOutlet weak var batLengthField: UITextField!
     @IBOutlet weak var submitBatLengthButton: UIButton!
+    @IBOutlet weak var showVelocities: UIButton!
+    @IBOutlet weak var velocityDisplayLabel: UILabel!
+    @IBOutlet weak var maxXVelocity: UILabel!
     
+    @IBAction func showVelocities(sender: AnyObject) {
+        velocityDisplayLabel.text = "\(averageVelocity)"
+        maxXVelocity.text = "\(maximumVelocityX)"
+    }
     @IBAction func submitBatLength(sender: UIButton) {
         batLengthField.resignFirstResponder()
     }
@@ -23,6 +30,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     var accellerations: [Acceleration]?
     var velocities: [Double]?
     var sampleRate = 1/60.0
+    var velocityXOverTime: [Double]?
+    var averageVelocity: Double!
+    var maximumVelocityX: Double!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +40,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let velocityX = calculateVelocityX(accellerations!)
         let velocityY = calculateVelocityY(accellerations!)
         let velocityZ = calculateVelocityZ(accellerations!)
-        let avergeVelocity = calculateAverageVelocity(velocityX, velocityY, velocityZ)
         
-        let velocityXOverTime = calculateVelocityXOverTime(accellerations!)
+        averageVelocity = calculateAverageVelocity(velocityX, velocityY, velocityZ)
+        velocityXOverTime = calculateVelocityXOverTime(accellerations!)
+        maximumVelocityX = calculateMaxVelocityX(velocityXOverTime!)
         
         
         batLengthField.delegate = self
@@ -107,7 +118,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         var velocities = [Double]()
         for index in 1..<accelerations.count {
             let velocityX = calculateVelocityX([accelerations[index-1], accelerations[index]])
-            velocities.append(velocityX)
+            velocities.append(velocityX - 0.0033)
         }
         
         for index in 1..<velocities.count {
@@ -116,6 +127,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return velocities.map{
             return $0 * -1
         }
+    }
+    
+    func calculateMaxVelocityX(velocities: [Double]) -> Double {
+        var max = velocities[0]
+        for index in 1..<velocities.count {
+            if velocities[index] > max {
+                max = velocities[index]
+            }
+        }
+        return max
     }
     
     //MARK: Data loading
