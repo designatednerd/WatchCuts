@@ -10,12 +10,25 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchCuts_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <group width="1" alignment="center" verticalAlignment="center" id="uPc-bf-QZ5">
+                        <group width="134" alignment="center" verticalAlignment="center" id="uPc-bf-QZ5">
                             <items>
                                 <label alignment="center" text="Label" id="vGv-D1-5LI"/>
                             </items>
                         </group>
+                        <group alignment="center" layout="vertical" id="cfI-hF-AGI">
+                            <items>
+                                <label alignment="left" text="x:" id="SY9-vG-8EE"/>
+                                <label alignment="left" text="y:" id="Yxl-Na-QuU"/>
+                                <label alignment="left" text="z:" id="bcg-hj-iej"/>
+                            </items>
+                        </group>
                     </items>
+                    <connections>
+                        <outlet property="speedLabel" destination="vGv-D1-5LI" id="l3A-tL-8gI"/>
+                        <outlet property="xLabel" destination="SY9-vG-8EE" id="BPm-IN-OB1"/>
+                        <outlet property="yLabel" destination="Yxl-Na-QuU" id="meA-F3-HT4"/>
+                        <outlet property="zLabel" destination="bcg-hj-iej" id="ITV-74-03M"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="331" y="345"/>

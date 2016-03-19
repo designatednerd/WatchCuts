@@ -19,6 +19,8 @@
 		9B299C3F1C9DA8930019AED1 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B299C3E1C9DA8930019AED1 /* InterfaceController.swift */; };
 		9B299C411C9DA8930019AED1 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B299C401C9DA8930019AED1 /* ExtensionDelegate.swift */; };
 		9B299C451C9DA8930019AED1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B299C441C9DA8930019AED1 /* Assets.xcassets */; };
+		9B5EE9831C9DBC9300472FE4 /* Acceleration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5EE9821C9DBC9300472FE4 /* Acceleration.swift */; };
+		9B5EE9841C9DBDE800472FE4 /* Acceleration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5EE9821C9DBC9300472FE4 /* Acceleration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,7 @@
 		9B299C401C9DA8930019AED1 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		9B299C441C9DA8930019AED1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B299C461C9DA8930019AED1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B5EE9821C9DBC9300472FE4 /* Acceleration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Acceleration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +151,7 @@
 			children = (
 				9B299C3E1C9DA8930019AED1 /* InterfaceController.swift */,
 				9B299C401C9DA8930019AED1 /* ExtensionDelegate.swift */,
+				9B5EE9821C9DBC9300472FE4 /* Acceleration.swift */,
 				9B299C441C9DA8930019AED1 /* Assets.xcassets */,
 				9B299C461C9DA8930019AED1 /* Info.plist */,
 			);
@@ -290,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B299C1C1C9DA8930019AED1 /* ViewController.swift in Sources */,
+				9B5EE9841C9DBDE800472FE4 /* Acceleration.swift in Sources */,
 				9B299C1A1C9DA8930019AED1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B299C411C9DA8930019AED1 /* ExtensionDelegate.swift in Sources */,
+				9B5EE9831C9DBC9300472FE4 /* Acceleration.swift in Sources */,
 				9B299C3F1C9DA8930019AED1 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -534,6 +540,7 @@
 				9B299C4B1C9DA8930019AED1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B299C4D1C9DA8930019AED1 /* Build configuration list for PBXNativeTarget "WatchCuts WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +549,7 @@
 				9B299C4F1C9DA8930019AED1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B299C511C9DA8930019AED1 /* Build configuration list for PBXNativeTarget "WatchCuts" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +558,7 @@
 				9B299C531C9DA8930019AED1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
