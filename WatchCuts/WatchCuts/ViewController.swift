@@ -60,6 +60,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
         //Split string here
         
+        let linePoints = fromFile.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
+        let stringPointsArray = linePoints.map{
+            return $0.stringByTrimmingCharactersInSet(.whitespaceCharacterSet()).stringByTrimmingCharactersInSet(.punctuationCharacterSet())
+        }
+        let pointsArray = stringPointsArray.map{
+            return Acceleration.fromDescription($0)
+        }
+        accellerations = pointsArray
     }
     
 }
