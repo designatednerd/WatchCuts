@@ -23,7 +23,8 @@
 		9B5EE9841C9DBDE800472FE4 /* Acceleration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5EE9821C9DBC9300472FE4 /* Acceleration.swift */; };
 		9BEA604D1C9DCC2B005C12B1 /* WatchKitMessageKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEA604C1C9DCC2B005C12B1 /* WatchKitMessageKey.swift */; };
 		9BEA604F1C9DCE82005C12B1 /* data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9BEA604E1C9DCE82005C12B1 /* data.txt */; };
-		FC728BE71C9DED93000707CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B299C1B1C9DA8930019AED1 /* ViewController.swift */; };
+		9EB1A5121C9E135100E9552B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B299C1B1C9DA8930019AED1 /* ViewController.swift */; };
+		A76E32C69F3CC99F73B919ED /* libPods-WatchCuts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E4AE6D0646F882AF5C3CA2 /* libPods-WatchCuts.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		73E4AE6D0646F882AF5C3CA2 /* libPods-WatchCuts.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WatchCuts.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B299C161C9DA8930019AED1 /* WatchCuts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchCuts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B299C191C9DA8930019AED1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B299C1B1C9DA8930019AED1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,9 @@
 		9B5EE9821C9DBC9300472FE4 /* Acceleration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Acceleration.swift; sourceTree = "<group>"; };
 		9BEA604C1C9DCC2B005C12B1 /* WatchKitMessageKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchKitMessageKey.swift; sourceTree = "<group>"; };
 		9BEA604E1C9DCE82005C12B1 /* data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.txt; sourceTree = "<group>"; };
+		9EDC4D631C9E0535000578C1 /* WatchCuts-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WatchCuts-Bridging-Header.h"; sourceTree = "<group>"; };
+		A730AEE24FB9E03AD4474BC4 /* Pods-WatchCuts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchCuts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatchCuts/Pods-WatchCuts.debug.xcconfig"; sourceTree = "<group>"; };
+		EF0C3BFCCD5CA4B20BA68FDE /* Pods-WatchCuts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchCuts.release.xcconfig"; path = "Pods/Target Support Files/Pods-WatchCuts/Pods-WatchCuts.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A76E32C69F3CC99F73B919ED /* libPods-WatchCuts.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +114,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26660E8FA7F1910FD407F8C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73E4AE6D0646F882AF5C3CA2 /* libPods-WatchCuts.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9B299C0D1C9DA8930019AED1 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +129,8 @@
 				9B299C2C1C9DA8930019AED1 /* WatchCuts WatchKit App */,
 				9B299C3B1C9DA8930019AED1 /* WatchCuts WatchKit Extension */,
 				9B299C171C9DA8930019AED1 /* Products */,
+				EAF33194792C04F0FF0EA830 /* Pods */,
+				26660E8FA7F1910FD407F8C4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,6 +155,7 @@
 				9B299C221C9DA8930019AED1 /* LaunchScreen.storyboard */,
 				9B299C251C9DA8930019AED1 /* Info.plist */,
 				9BEA604C1C9DCC2B005C12B1 /* WatchKitMessageKey.swift */,
+				9EDC4D631C9E0535000578C1 /* WatchCuts-Bridging-Header.h */,
 			);
 			path = WatchCuts;
 			sourceTree = "<group>";
@@ -165,6 +182,15 @@
 			path = "WatchCuts WatchKit Extension";
 			sourceTree = "<group>";
 		};
+		EAF33194792C04F0FF0EA830 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A730AEE24FB9E03AD4474BC4 /* Pods-WatchCuts.debug.xcconfig */,
+				EF0C3BFCCD5CA4B20BA68FDE /* Pods-WatchCuts.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -172,10 +198,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9B299C511C9DA8930019AED1 /* Build configuration list for PBXNativeTarget "WatchCuts" */;
 			buildPhases = (
+				3402E31F4B8929F2956EC7E0 /* Check Pods Manifest.lock */,
 				9B299C121C9DA8930019AED1 /* Sources */,
 				9B299C131C9DA8930019AED1 /* Frameworks */,
 				9B299C141C9DA8930019AED1 /* Resources */,
 				9B299C501C9DA8930019AED1 /* Embed Watch Content */,
+				45E46E1A974D3D36EE164770 /* Embed Pods Frameworks */,
+				40756C8E71AEDA1E2AE40DE3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -312,6 +341,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3402E31F4B8929F2956EC7E0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		40756C8E71AEDA1E2AE40DE3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WatchCuts/Pods-WatchCuts-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45E46E1A974D3D36EE164770 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WatchCuts/Pods-WatchCuts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9B299C121C9DA8930019AED1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -319,7 +396,7 @@
 			files = (
 				9BEA604D1C9DCC2B005C12B1 /* WatchKitMessageKey.swift in Sources */,
 				9B5EE9841C9DBDE800472FE4 /* Acceleration.swift in Sources */,
-				FC728BE71C9DED93000707CC /* ViewController.swift in Sources */,
+				9EB1A5121C9E135100E9552B /* ViewController.swift in Sources */,
 				9B299C1A1C9DA8930019AED1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -531,6 +608,7 @@
 		};
 		9B299C521C9DA8930019AED1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A730AEE24FB9E03AD4474BC4 /* Pods-WatchCuts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
@@ -540,12 +618,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.baseballhack2016.WatchCuts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "WatchCuts/WatchCuts-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		9B299C531C9DA8930019AED1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF0C3BFCCD5CA4B20BA68FDE /* Pods-WatchCuts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
@@ -555,7 +634,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.baseballhack2016.WatchCuts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "WatchCuts/WatchCuts-Bridging-Header.h";
 			};
 			name = Release;
 		};

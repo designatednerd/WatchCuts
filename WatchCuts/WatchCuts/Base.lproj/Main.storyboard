@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,94 +19,124 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your bat length?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5g-cN-pF2">
-                                <rect key="frame" x="207" y="207" width="186" height="21"/>
+                                <rect key="frame" x="206" y="10" width="186" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="FaX-UI-Er5"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xa0-ph-3ul">
-                                <rect key="frame" x="244" y="292" width="112" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xa0-ph-3ul">
+                                <rect key="frame" x="243" y="71" width="112" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8JT-eI-Ooq"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="M4c-3q-Ze1"/>
+                                </constraints>
                                 <state key="normal" title="Save Bat Length"/>
                                 <connections>
-                                    <action selector="submitBatLength:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PVJ-S3-4Db"/>
+                                    <action selector="submitBatLength:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VJn-hr-tFq"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4CD-sX-e3G">
-                                <rect key="frame" x="192" y="249" width="217" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4CD-sX-e3G">
+                                <rect key="frame" x="191" y="36" width="217" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="217" id="UNy-jG-svi"/>
+                                    <constraint firstAttribute="height" constant="32" id="YtA-WA-B6p"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="jWf-VI-ipg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6F-kn-UPy">
-                                <rect key="frame" x="230" y="398" width="141" height="30"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="svf-2x-oJp" customClass="CPTGraphHostingView">
+                                <rect key="frame" x="0.0" y="109" width="600" height="376"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6F-kn-UPy">
+                                <rect key="frame" x="228" y="500" width="141" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="j66-wx-DbU"/>
+                                </constraints>
                                 <state key="normal" title="Calculate Velocities"/>
                                 <connections>
-                                    <action selector="showVelocities:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VwL-OB-JB5"/>
+                                    <action selector="showVelocities:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wtd-kf-i5s"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RPk-CH-LN5">
-                                <rect key="frame" x="192" y="443" width="138" height="46"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RPk-CH-LN5">
+                                <rect key="frame" x="229" y="548" width="139" height="47"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="bottom" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Q9J-dN-1XQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="118" height="46"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Q9J-dN-1XQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="118" height="47"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Total Speed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zt1-ra-Vh8">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Speed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zt1-ra-Vh8">
                                                 <rect key="frame" x="22" y="0.0" width="96" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Max X Velocity:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnA-jH-fLG">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max X Velocity:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnA-jH-fLG">
                                                 <rect key="frame" x="0.0" y="26" width="118" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8ji-tk-T3A">
-                                        <rect key="frame" x="128" y="0.0" width="11" height="46"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8ji-tk-T3A">
+                                        <rect key="frame" x="128" y="0.0" width="11" height="47"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfs-zy-F5P">
                                                 <rect key="frame" x="0.0" y="0.0" width="9" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="b" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZX-FD-qQJ">
                                                 <rect key="frame" x="0.0" y="26" width="11" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Q9J-dN-1XQ" secondAttribute="bottom" id="EPe-kq-8Ba"/>
+                                    <constraint firstAttribute="height" constant="47" id="Swv-u3-nDi"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="RPk-CH-LN5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DrI-Mj-viK"/>
-                            <constraint firstItem="J5g-cN-pF2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="187" id="Ekc-44-ftM"/>
-                            <constraint firstItem="xa0-ph-3ul" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ly5-vT-m3q"/>
-                            <constraint firstItem="xa0-ph-3ul" firstAttribute="top" secondItem="4CD-sX-e3G" secondAttribute="bottom" constant="13" id="NIX-ce-I44"/>
-                            <constraint firstItem="x6F-kn-UPy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NZM-FU-O4U"/>
-                            <constraint firstItem="RPk-CH-LN5" firstAttribute="top" secondItem="x6F-kn-UPy" secondAttribute="bottom" constant="15" id="T2s-4q-6U4"/>
-                            <constraint firstItem="x6F-kn-UPy" firstAttribute="top" secondItem="xa0-ph-3ul" secondAttribute="bottom" constant="78" id="X8Y-sQ-kpE"/>
-                            <constraint firstItem="J5g-cN-pF2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ym7-ra-8Uu"/>
-                            <constraint firstItem="4CD-sX-e3G" firstAttribute="top" secondItem="J5g-cN-pF2" secondAttribute="bottom" constant="21" id="fph-mC-TRL"/>
-                            <constraint firstItem="4CD-sX-e3G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mnD-Xy-Kxb"/>
+                            <constraint firstItem="x6F-kn-UPy" firstAttribute="top" secondItem="svf-2x-oJp" secondAttribute="bottom" constant="15" id="2gb-tk-dCH"/>
+                            <constraint firstItem="xa0-ph-3ul" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="223" id="2ul-Nr-bUe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="x6F-kn-UPy" secondAttribute="trailing" constant="211" id="8RA-ga-7OI"/>
+                            <constraint firstItem="4CD-sX-e3G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="171" id="8mn-h2-hbQ"/>
+                            <constraint firstItem="x6F-kn-UPy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="208" id="DvT-YX-gUt"/>
+                            <constraint firstItem="4CD-sX-e3G" firstAttribute="top" secondItem="J5g-cN-pF2" secondAttribute="bottom" constant="5" id="J7r-HM-moH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4CD-sX-e3G" secondAttribute="trailing" constant="172" id="Q5E-Km-Xzf"/>
+                            <constraint firstItem="svf-2x-oJp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Wue-6d-Qcx"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RPk-CH-LN5" secondAttribute="bottom" constant="5" id="YMN-VU-IEA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="svf-2x-oJp" secondAttribute="trailing" constant="-20" id="Z6N-er-S9A"/>
+                            <constraint firstItem="J5g-cN-pF2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="186" id="ZHl-wt-hrb"/>
+                            <constraint firstItem="RPk-CH-LN5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="209" id="aLm-vN-mBo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xa0-ph-3ul" secondAttribute="trailing" constant="225" id="cmC-NN-FbK"/>
+                            <constraint firstItem="xa0-ph-3ul" firstAttribute="top" secondItem="4CD-sX-e3G" secondAttribute="bottom" constant="3" id="erV-mM-h3t"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RPk-CH-LN5" secondAttribute="trailing" constant="212" id="k3c-Ef-0w8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="J5g-cN-pF2" secondAttribute="trailing" constant="188" id="kBl-xW-S0S"/>
+                            <constraint firstItem="J5g-cN-pF2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="10" id="sCZ-Sd-0Tc"/>
+                            <constraint firstItem="svf-2x-oJp" firstAttribute="top" secondItem="xa0-ph-3ul" secondAttribute="bottom" constant="8" id="tXh-b3-b8H"/>
+                            <constraint firstItem="RPk-CH-LN5" firstAttribute="top" secondItem="x6F-kn-UPy" secondAttribute="bottom" constant="18" id="zuZ-Er-9Kg"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="batLengthField" destination="4CD-sX-e3G" id="m5N-f9-aiy"/>
-                        <outlet property="batLengthQuestionLabel" destination="J5g-cN-pF2" id="jD4-VX-grl"/>
-                        <outlet property="maxXVelocity" destination="VZX-FD-qQJ" id="zo0-Rj-ULU"/>
-                        <outlet property="showVelocities" destination="x6F-kn-UPy" id="rgN-Dy-E09"/>
-                        <outlet property="submitBatLengthButton" destination="xa0-ph-3ul" id="541-9u-RMJ"/>
-                        <outlet property="velocityDisplayLabel" destination="jfs-zy-F5P" id="z3g-ih-Ajj"/>
+                        <outlet property="batLengthField" destination="4CD-sX-e3G" id="UaH-hT-4HP"/>
+                        <outlet property="batLengthQuestionLabel" destination="J5g-cN-pF2" id="Olf-bh-Ulv"/>
+                        <outlet property="graphView" destination="svf-2x-oJp" id="dAx-ag-Mlk"/>
+                        <outlet property="maxXVelocity" destination="VZX-FD-qQJ" id="fJT-eq-Azh"/>
+                        <outlet property="showVelocities" destination="x6F-kn-UPy" id="GtO-8d-sEi"/>
+                        <outlet property="submitBatLengthButton" destination="xa0-ph-3ul" id="8jO-Rz-25v"/>
+                        <outlet property="velocityDisplayLabel" destination="jfs-zy-F5P" id="lYy-dv-aHJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

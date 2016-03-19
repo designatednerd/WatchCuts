@@ -8,15 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, CPTPlotDataSource {
     
 
-    @IBOutlet weak var batLengthQuestionLabel: UILabel!
     @IBOutlet weak var batLengthField: UITextField!
+    @IBOutlet weak var batLengthQuestionLabel: UILabel!
     @IBOutlet weak var submitBatLengthButton: UIButton!
     @IBOutlet weak var showVelocities: UIButton!
     @IBOutlet weak var velocityDisplayLabel: UILabel!
     @IBOutlet weak var maxXVelocity: UILabel!
+    @IBOutlet weak var graphView: CPTGraphHostingView!
     
     @IBAction func showVelocities(sender: AnyObject) {
         velocityDisplayLabel.text = "\(averageVelocity)"
@@ -51,6 +52,36 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if let batLength = defaults.stringForKey(batLengthUserKey) {
             batLengthField.text = batLength
         }
+        
+        createGraph();
+    }
+    
+    func createGraph() {
+        // create graph
+        let graph = CPTXYGraph(frame: CGRectZero)
+        graph.title = "Hello Graph"
+        graph.paddingLeft = 0
+        graph.paddingTop = 0
+        graph.paddingRight = 0
+        graph.paddingBottom = 0
+        // hide the axes
+        let axes = graph.axisSet as! CPTXYAxisSet
+        let lineStyle = CPTMutableLineStyle()
+        lineStyle.lineWidth = 5
+        axes.xAxis!.axisLineStyle = lineStyle
+        axes.yAxis!.axisLineStyle = lineStyle
+        
+        // add a pie plot
+        let pie = CPTPieChart()
+        pie.dataSource = self
+        pie.pieRadius = (self.view.frame.size.width * 0.9)/2
+        graph.addPlot(pie)
+        
+        self.graphView.hostedGraph = graph
+    }
+    
+    func numberOfRecordsForPlot(plot: CPTPlot) -> UInt {
+        return 4
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
