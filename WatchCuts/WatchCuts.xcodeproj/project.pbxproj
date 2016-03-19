@@ -19,6 +19,7 @@
 		9B299C3F1C9DA8930019AED1 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B299C3E1C9DA8930019AED1 /* InterfaceController.swift */; };
 		9B299C411C9DA8930019AED1 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B299C401C9DA8930019AED1 /* ExtensionDelegate.swift */; };
 		9B299C451C9DA8930019AED1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B299C441C9DA8930019AED1 /* Assets.xcassets */; };
+		9B43B02F1C9DDB6F0064767C /* WatchKitMessageKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEA604C1C9DCC2B005C12B1 /* WatchKitMessageKey.swift */; };
 		9B5EE9831C9DBC9300472FE4 /* Acceleration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5EE9821C9DBC9300472FE4 /* Acceleration.swift */; };
 		9B5EE9841C9DBDE800472FE4 /* Acceleration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5EE9821C9DBC9300472FE4 /* Acceleration.swift */; };
 		9BEA604D1C9DCC2B005C12B1 /* WatchKitMessageKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEA604C1C9DCC2B005C12B1 /* WatchKitMessageKey.swift */; };
@@ -339,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B43B02F1C9DDB6F0064767C /* WatchKitMessageKey.swift in Sources */,
 				9B299C411C9DA8930019AED1 /* ExtensionDelegate.swift in Sources */,
 				9B5EE9831C9DBC9300472FE4 /* Acceleration.swift in Sources */,
 				9B299C3F1C9DA8930019AED1 /* InterfaceController.swift in Sources */,

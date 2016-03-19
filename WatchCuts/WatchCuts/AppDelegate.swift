@@ -21,10 +21,10 @@ extension AppDelegate: WCSessionDelegate {
         
         if let accels = message[WatchKitMessageKey.accels.rawValue] as? [Acceleration] {
             NSLog("Accelerations: \(accels)")
-            replyHandler([WatchKitMessageKey.success.rawValue: NSNumber(bool: true)])
+//            replyHandler([WatchKitMessageKey.success.rawValue: NSNumber(bool: true)])
         } else {
             NSLog("YOU CANNOT HAS")
-            replyHandler([WatchKitMessageKey.success.rawValue: NSNumber(bool: false)])
+//            replyHandddler([WatchKitMessageKey.success.rawValue: NSNumber(bool: false)])
         }
     }
 }
