@@ -44,8 +44,14 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
         
         self.session = WCSession.defaultSession()
         
+        self.updateUI()
+        
+        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "updateUI", userInfo: nil, repeats: true)
+    }
+    
+    func updateUI() {
         let now = NSDate()
-        guard let dataList = self.recorder.accelerometerDataFromDate(now.dateByAddingTimeInterval(-60), toDate: now) else {
+        guard let dataList = self.recorder.accelerometerDataFromDate(now.dateByAddingTimeInterval(-5), toDate: now) else {
             NSLog("NO DATA FOR YOU")
             return
         }
@@ -70,7 +76,6 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
         if let interfaceController = WKExtension.sharedExtension().rootInterfaceController as? InterfaceController {
             interfaceController.updateUIWithAccelleration(lastAccel)
         }
-        
     }
     
     func applicationWillResignActive() {
